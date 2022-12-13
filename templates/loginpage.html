@@ -35,7 +35,7 @@
                 <label>Age</label>
               </div>
 
-                <button type="submit" value="submit" class="btn btn-primary">Submit</button></a> 
+                <button id="butt" onclick="buttonclicked()" type="submit" value="submit" class="btn btn-primary">Submit</button></a> 
               
               <!-- <a href="#">
                 <span></span>
@@ -47,6 +47,17 @@
             </form>
           </div>
     </div>
+    <script>
+         buttonclicked=()=>{
+            
+            document.getElementById("butt").innerHTML="submitted"
+            alert("Do Yu want to Submit This form ?")
+            // console.log("clicked")
+
+        }
+    </script>
+
+    
 
 
 
