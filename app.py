@@ -9,7 +9,9 @@ class form(db.Model):
    sno= db.Column( db.Integer, primary_key = True)
    name = db.Column(db.String(100))
    city = db.Column(db.String(50))  
-   pin = db.Column(db.String(10))
+   phone = db.Column(db.String(10))
+   age= db.Column(db.String(100))
+
 
 @app.route('/',methods=['GET','POST'])
 def contact():
@@ -17,8 +19,9 @@ def contact():
 
         name=request.form.get('name')
         city=request.form.get('city')
-        pin=request.form.get('pin')
-        entry= form(name=name,city=city,pin=pin)
+        phone=request.form.get('phone')
+        age=request.form.get('age')
+        entry= form(name=name,city=city,phone=phone,age=age)
         db.session.add(entry)
         db.session.commit()
 
