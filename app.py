@@ -25,7 +25,11 @@ def contact():
         db.session.add(entry)
         db.session.commit()
 
-    return render_template('index.html')
+    return render_template('loginpage.html')
+# @app.route('/login',methods=['GET','POST'])
+# def login():
+#     return render_template("loginpage.html")
+
 
 if __name__== "__main__":
     app.run(debug=True)
